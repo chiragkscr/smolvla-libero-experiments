@@ -1,0 +1,194 @@
+config.json: 100%|█████████████████████████████████████████████████| 2.11k/2.11k [00:00<00:00, 10.5MB/s]
+WARNING 2026-11-12 12:00:07 figs/eval.py:73 No job name provided, using 'libero_smolvla' as job name.
+INFO 2026-11-12 12:00:07 bot_eval.py:813 {'env': {'camera_name': 'agentview_image,robot0_eye_in_hand_image',
+         'camera_name_mapping': None,
+         'control_mode': 'relative',
+         'disable_env_checker': True,
+         'episode_length': None,
+         'features': {},
+         'features_map': {},
+         'fps': 20,
+         'hard_reset': True,
+         'init_states': True,
+         'is_libero_plus': False,
+         'max_parallel_tasks': 1,
+         'obs_type': 'pixels_agent_pos',
+         'observation_height': 360,
+         'observation_width': 360,
+         'render_mode': 'rgb_array',
+         'server': None,
+         'task': 'libero_spatial',
+         'task_ids': None},
+ 'eval': {'batch_size': 1,
+          'max_episode_steps': None,
+          'n_episodes': 2,
+          'recording': False,
+          'recording_private': False,
+          'recording_repo_id': None,
+          'use_async_envs': True},
+ 'job_name': 'libero_smolvla',
+ 'output_dir': PosixPath('eval_logs'),
+ 'policy': {'adapt_to_pi_aloha': False,
+            'add_image_special_tokens': False,
+            'attention_mode': 'cross_attn',
+            'chunk_size': 50,
+            'compile_mode': 'max-autotune',
+            'compile_model': False,
+            'device': 'cuda',
+            'dtype': None,
+            'empty_cameras': 0,
+            'expert_width_multiplier': 0.5,
+            'freeze_vision_encoder': True,
+            'input_features': {'observation.images.image': {'shape': (3,
+                                                                      256,
+                                                                      256),
+                                                            'type': <FeatureType.VISUAL: 'VISUAL'>},
+                               'observation.images.image2': {'shape': (3,
+                                                                       256,
+                                                                       256),
+                                                             'type': <FeatureType.VISUAL: 'VISUAL'>},
+                               'observation.state': {'shape': (8,),
+                                                     'type': <FeatureType.STATE: 'STATE'>}},
+            'license': None,
+            'load_vlm_weights': True,
+            'max_action_dim': 32,
+            'max_period': 4.0,
+            'max_state_dim': 32,
+            'min_period': 0.004,
+            'n_action_steps': 1,
+            'n_obs_steps': 1,
+            'normalization_mapping': {'ACTION': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'STATE': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'VISUAL': <NormalizationMode.IDENTITY: 'IDENTITY'>},
+            'num_expert_layers': -1,
+            'num_steps': 10,
+            'num_vlm_layers': 0,
+            'optimizer_betas': (0.9, 0.95),
+            'optimizer_eps': 1e-08,
+            'optimizer_fused': None,
+            'optimizer_grad_clip_norm': 10.0,
+            'optimizer_lr': 0.0001,
+            'optimizer_weight_decay': 1e-10,
+            'output_features': {'action': {'shape': (7,),
+                                           'type': <FeatureType.ACTION: 'ACTION'>}},
+            'pad_language_to': 'longest',
+            'prefix_length': 0,
+            'pretrained_path': PosixPath('HuggingFaceVLA/smolvla_libero'),
+            'pretrained_revision': None,
+            'private': None,
+            'push_to_hub': True,
+            'repo_id': 'None',
+            'resize_imgs_with_padding': (512, 512),
+            'rtc_config': None,
+            'scheduler_decay_lr': 2.5e-06,
+            'scheduler_decay_steps': 30000,
+            'scheduler_warmup_steps': 1000,
+            'self_attn_every_n_layers': 2,
+            'tags': None,
+            'tokenizer_max_length': 48,
+            'train_expert_only': True,
+            'train_state_proj': True,
+            'use_amp': False,
+            'use_cache': True,
+            'use_delta_joint_actions_aloha': False,
+            'use_peft': False,
+            'vlm_model_name': 'HuggingFaceTB/SmolVLM2-500M-Instruct'},
+ 'rename_map': {},
+ 'seed': 1000,
+ 'tf32': True,
+ 'trust_remote_code': False}
+INFO 2026-11-12 12:00:07 bot_eval.py:835 Output dir: eval_logs
+INFO 2026-11-12 12:00:07 bot_eval.py:837 Making environment (batch_size=1, async=True).
+Do you want to specify a custom path for the dataset folder? (Y/N): y
+Enter the path where you want to store the datasets: ~/VLA
+The full path of the custom storage path you entered is:
+/home/zas/VLA/datasets
+Do you want to continue? (Y/N)
+y
+Initializing the default config file...
+The following information is stored in the config file: /home/zas/.libero/config.yaml
+benchmark_root: /home/zas/VLA/lerobot/.venv/lib/python3.12/site-packages/libero/libero
+bddl_files: /home/zas/VLA/lerobot/.venv/lib/python3.12/site-packages/libero/libero/./bddl_files
+init_states: /home/zas/VLA/lerobot/.venv/lib/python3.12/site-packages/libero/libero/./init_files
+datasets: /home/zas/VLA/datasets
+assets: /home/zas/VLA/lerobot/.venv/lib/python3.12/site-packages/libero/libero/./assets
+/home/zas/VLA/lerobot/.venv/lib/python3.12/site-packages/robosuite/__init__.py:33: SyntaxWarning: invalid escape sequence '\ '
+  /[_]\  [~]\/    |//  |
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING 2026-11-12 12:00:29 e/__init__.py:7 No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING 2026-11-12 12:00:29 e/__init__.py:8 It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /home/zas/VLA/lerobot/.venv/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING 2026-11-12 12:00:29 e/__init__.py:9 To setup, run: python /home/zas/VLA/lerobot/.venv/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+INFO 2026-11-12 12:00:29 tesupport.py:24 No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+INFO 2026-11-12 12:00:29 s/libero.py:510 Creating LIBERO envs | suites=['libero_spatial'] | n_envs(per task)=1 | init_states=True
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+INFO 2026-11-12 12:00:30 s/libero.py:510 Creating LIBERO envs | suites=['libero_spatial'] | n_envs(per task)=1 | init_states=True
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+INFO 2026-11-12 12:00:30 s/libero.py:510 Creating LIBERO envs | suites=['libero_spatial'] | n_envs(per task)=1 | init_states=True
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+INFO 2026-11-12 12:00:30 s/libero.py:510 Creating LIBERO envs | suites=['libero_spatial'] | n_envs(per task)=1 | init_states=True
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+INFO 2026-11-12 12:00:30 s/libero.py:510 Creating LIBERO envs | suites=['libero_spatial'] | n_envs(per task)=1 | init_states=True
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+INFO 2026-11-12 12:00:30 s/libero.py:510 Creating LIBERO envs | suites=['libero_spatial'] | n_envs(per task)=1 | init_states=True
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+INFO 2026-11-12 12:00:30 s/libero.py:510 Creating LIBERO envs | suites=['libero_spatial'] | n_envs(per task)=1 | init_states=True
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+INFO 2026-11-12 12:00:30 s/libero.py:510 Creating LIBERO envs | suites=['libero_spatial'] | n_envs(per task)=1 | init_states=True
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+INFO 2026-11-12 12:00:30 s/libero.py:510 Creating LIBERO envs | suites=['libero_spatial'] | n_envs(per task)=1 | init_states=True
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+INFO 2026-11-12 12:00:30 s/libero.py:510 Creating LIBERO envs | suites=['libero_spatial'] | n_envs(per task)=1 | init_states=True
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+INFO 2026-11-12 12:00:30 bot_eval.py:862 Making policy.
+Loading  HuggingFaceTB/SmolVLM2-500M-Instruct weights ...
+config.json: 100%|█████████████████████████████████████████████████| 3.77k/3.77k [00:00<00:00, 19.3MB/s]
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|██████████████████████████████████████████████| 489/489 [00:00<00:00, 7393.36it/s]
+generation_config.json: 100%|███████████████████████████████████████████| 136/136 [00:00<00:00, 886kB/s]
+processor_config.json: 100%|██████████████████████████████████████████| 67.0/67.0 [00:00<00:00, 450kB/s]
+chat_template.json: 100%|██████████████████████████████████████████████| 430/430 [00:00<00:00, 3.24MB/s]
+preprocessor_config.json: 100%|████████████████████████████████████████| 599/599 [00:00<00:00, 4.49MB/s]
+tokenizer_config.json: 100%|████████████████████████████████████████| 28.6k/28.6k [00:00<00:00, 123MB/s]
+tokenizer.json: 100%|██████████████████████████████████████████████| 3.55M/3.55M [00:00<00:00, 25.7MB/s]
+added_tokens.json: 100%|███████████████████████████████████████████| 4.74k/4.74k [00:00<00:00, 22.9MB/s]
+special_tokens_map.json: 100%|█████████████████████████████████████████| 868/868 [00:00<00:00, 5.93MB/s]
+model.safetensors: downloading bytes: ██████████████████████████████████████████████| 1.06GB, 2.74MB/s  
+model.safetensors: reconstructing file: 100%|██████████████████████████████| 1.22GB / 1.22GB, 14.9MB/s  
+policy_preprocessor.json: 100%|████████████████████████████████████| 1.71k/1.71k [00:00<00:00, 8.73MB/s]
+policy_preprocessor_step_5_normalizer_pr(…): downloading bytes: ████████████████████|   290B,  27.2B/s  
+policy_preprocessor_step_5_normalizer_pr(…): reconstructing file: 100%|████|   416B /   416B,  39.1B/s  
+policy_postprocessor.json: 100%|███████████████████████████████████████| 660/660 [00:00<00:00, 4.26MB/s]
+Stepping through eval batches:   0%|                                              | 0/2 [00:00<?, ?it/s]Local assets not found. Downloading from HuggingFace Hub...
+Downloading LIBERO assets from Hugging Face...
+/home/zas/VLA/lerobot/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:205: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `snapshot_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Fetching 586 files: 100%|█████████████████████████████████████████████| 586/586 [02:01<00:00,  4.84it/s]
+Downloading bytes: ██████████████████████████████████████████████████████▏          |  352MB, 1.19MB/s  Assets downloaded successfully to /home/zas/.cache/libero/assets█████████████████████|  352MB, 1.19MB/s  
+Download complete: █████████████████████████████████████████████████████████████████|  352MB, 1.19MB/s  
+Reconstruction complete: 100%|█████████████████████████████████████████████|  422MB /  422MB, 1.77MB/s  
+Stepping through eval batches: 100%|█████████| 2/2 [03:27<00:00, 103.93s/it, running_success_rate=50.0%]
+Stepping through eval batches: 100%|█████████| 2/2 [00:46<00:00, 23.07s/it, running_success_rate=100.0%]
+Stepping through eval batches: 100%|██████████| 2/2 [01:20<00:00, 40.09s/it, running_success_rate=50.0%]
+Stepping through eval batches: 100%|█████████| 2/2 [00:39<00:00, 19.62s/it, running_success_rate=100.0%]
+Stepping through eval batches: 100%|██████████| 2/2 [01:25<00:00, 42.83s/it, running_success_rate=50.0%]
+Stepping through eval batches: 100%|██████████| 2/2 [01:17<00:00, 38.53s/it, running_success_rate=50.0%]
+Stepping through eval batches: 100%|█████████| 2/2 [00:42<00:00, 21.35s/it, running_success_rate=100.0%]
+Stepping through eval batches: 100%|██████████| 2/2 [01:24<00:00, 42.42s/it, running_success_rate=50.0%]
+Stepping through eval batches: 100%|█████████| 2/2 [00:37<00:00, 18.80s/it, running_success_rate=100.0%]
+Stepping through eval batches: 100%|██████████| 2/2 [01:23<00:00, 41.67s/it, running_success_rate=50.0%]
+INFO 2026-11-12 12:18:13 bot_eval.py:908 Overall Aggregated Metrics:                                    
+INFO 2026-11-12 12:18:13 bot_eval.py:909 {'avg_sum_reward': 0.7, 'avg_max_reward': 0.7, 'pc_success': 70.0, 'n_episodes': 20, 'n_success': 14, 'pc_success_ci95': [48.10271816464765, 85.45227551323956], 'eval_s': 788.5233907699585, 'eval_ep_s': 39.42616956233978, 'video_paths': ['eval_logs/videos/libero_spatial_0/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_0/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_1/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_1/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_2/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_2/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_3/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_3/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_4/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_4/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_5/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_5/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_6/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_6/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_7/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_7/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_8/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_8/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_9/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_9/eval_episode_1.mp4'], 'predicted_video_paths': []}
+INFO 2026-11-12 12:18:13 bot_eval.py:911 Success rate 70.0% (14/20 episodes, 95% Wilson interval 48.1% to 85.5%)
+INFO 2026-11-12 12:18:13 bot_eval.py:922 
+Aggregated Metrics for per_task:
+INFO 2026-11-12 12:18:13 bot_eval.py:923 [{'task_group': 'libero_spatial', 'task_id': 0, 'metrics': {'sum_rewards': [1.0, 0.0], 'max_rewards': [1.0, 0.0], 'successes': [True, False], 'video_paths': ['eval_logs/videos/libero_spatial_0/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_0/eval_episode_1.mp4'], 'predicted_video_paths': []}, 'n_episodes': 2, 'n_success': 1, 'pc_success': 50.0, 'pc_success_ci95': [9.453120573423075, 90.54687942657694]}, {'task_group': 'libero_spatial', 'task_id': 1, 'metrics': {'sum_rewards': [1.0, 1.0], 'max_rewards': [1.0, 1.0], 'successes': [True, True], 'video_paths': ['eval_logs/videos/libero_spatial_1/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_1/eval_episode_1.mp4'], 'predicted_video_paths': []}, 'n_episodes': 2, 'n_success': 2, 'pc_success': 100.0, 'pc_success_ci95': [34.23802275066532, 100.0]}, {'task_group': 'libero_spatial', 'task_id': 2, 'metrics': {'sum_rewards': [1.0, 0.0], 'max_rewards': [1.0, 0.0], 'successes': [True, False], 'video_paths': ['eval_logs/videos/libero_spatial_2/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_2/eval_episode_1.mp4'], 'predicted_video_paths': []}, 'n_episodes': 2, 'n_success': 1, 'pc_success': 50.0, 'pc_success_ci95': [9.453120573423075, 90.54687942657694]}, {'task_group': 'libero_spatial', 'task_id': 3, 'metrics': {'sum_rewards': [1.0, 1.0], 'max_rewards': [1.0, 1.0], 'successes': [True, True], 'video_paths': ['eval_logs/videos/libero_spatial_3/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_3/eval_episode_1.mp4'], 'predicted_video_paths': []}, 'n_episodes': 2, 'n_success': 2, 'pc_success': 100.0, 'pc_success_ci95': [34.23802275066532, 100.0]}, {'task_group': 'libero_spatial', 'task_id': 4, 'metrics': {'sum_rewards': [1.0, 0.0], 'max_rewards': [1.0, 0.0], 'successes': [True, False], 'video_paths': ['eval_logs/videos/libero_spatial_4/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_4/eval_episode_1.mp4'], 'predicted_video_paths': []}, 'n_episodes': 2, 'n_success': 1, 'pc_success': 50.0, 'pc_success_ci95': [9.453120573423075, 90.54687942657694]}, {'task_group': 'libero_spatial', 'task_id': 5, 'metrics': {'sum_rewards': [1.0, 0.0], 'max_rewards': [1.0, 0.0], 'successes': [True, False], 'video_paths': ['eval_logs/videos/libero_spatial_5/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_5/eval_episode_1.mp4'], 'predicted_video_paths': []}, 'n_episodes': 2, 'n_success': 1, 'pc_success': 50.0, 'pc_success_ci95': [9.453120573423075, 90.54687942657694]}, {'task_group': 'libero_spatial', 'task_id': 6, 'metrics': {'sum_rewards': [1.0, 1.0], 'max_rewards': [1.0, 1.0], 'successes': [True, True], 'video_paths': ['eval_logs/videos/libero_spatial_6/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_6/eval_episode_1.mp4'], 'predicted_video_paths': []}, 'n_episodes': 2, 'n_success': 2, 'pc_success': 100.0, 'pc_success_ci95': [34.23802275066532, 100.0]}, {'task_group': 'libero_spatial', 'task_id': 7, 'metrics': {'sum_rewards': [1.0, 0.0], 'max_rewards': [1.0, 0.0], 'successes': [True, False], 'video_paths': ['eval_logs/videos/libero_spatial_7/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_7/eval_episode_1.mp4'], 'predicted_video_paths': []}, 'n_episodes': 2, 'n_success': 1, 'pc_success': 50.0, 'pc_success_ci95': [9.453120573423075, 90.54687942657694]}, {'task_group': 'libero_spatial', 'task_id': 8, 'metrics': {'sum_rewards': [1.0, 1.0], 'max_rewards': [1.0, 1.0], 'successes': [True, True], 'video_paths': ['eval_logs/videos/libero_spatial_8/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_8/eval_episode_1.mp4'], 'predicted_video_paths': []}, 'n_episodes': 2, 'n_success': 2, 'pc_success': 100.0, 'pc_success_ci95': [34.23802275066532, 100.0]}, {'task_group': 'libero_spatial', 'task_id': 9, 'metrics': {'sum_rewards': [1.0, 0.0], 'max_rewards': [1.0, 0.0], 'successes': [True, False], 'video_paths': ['eval_logs/videos/libero_spatial_9/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_9/eval_episode_1.mp4'], 'predicted_video_paths': []}, 'n_episodes': 2, 'n_success': 1, 'pc_success': 50.0, 'pc_success_ci95': [9.453120573423075, 90.54687942657694]}]
+INFO 2026-11-12 12:18:13 bot_eval.py:922 
+Aggregated Metrics for per_group:
+INFO 2026-11-12 12:18:13 bot_eval.py:923 {'libero_spatial': {'avg_sum_reward': 0.7, 'avg_max_reward': 0.7, 'pc_success': 70.0, 'n_episodes': 20, 'n_success': 14, 'pc_success_ci95': [48.10271816464765, 85.45227551323956], 'video_paths': ['eval_logs/videos/libero_spatial_0/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_0/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_1/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_1/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_2/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_2/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_3/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_3/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_4/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_4/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_5/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_5/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_6/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_6/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_7/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_7/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_8/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_8/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_9/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_9/eval_episode_1.mp4'], 'predicted_video_paths': []}}
+INFO 2026-11-12 12:18:13 bot_eval.py:922 
+Aggregated Metrics for overall:
+INFO 2026-11-12 12:18:13 bot_eval.py:923 {'avg_sum_reward': 0.7, 'avg_max_reward': 0.7, 'pc_success': 70.0, 'n_episodes': 20, 'n_success': 14, 'pc_success_ci95': [48.10271816464765, 85.45227551323956], 'eval_s': 788.5233907699585, 'eval_ep_s': 39.42616956233978, 'video_paths': ['eval_logs/videos/libero_spatial_0/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_0/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_1/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_1/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_2/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_2/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_3/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_3/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_4/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_4/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_5/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_5/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_6/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_6/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_7/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_7/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_8/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_8/eval_episode_1.mp4', 'eval_logs/videos/libero_spatial_9/eval_episode_0.mp4', 'eval_logs/videos/libero_spatial_9/eval_episode_1.mp4'], 'predicted_video_paths': []}
+INFO 2026-11-12 12:18:13 bot_eval.py:941 End of eval
+

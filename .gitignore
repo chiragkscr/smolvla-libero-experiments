@@ -1,0 +1,9 @@
+cat > .gitignore << 'EOF'
+*.mp4
+*.pt
+*.safetensors
+outputs/
+eval_logs/videos/
+.venv/
+.env
+EOF

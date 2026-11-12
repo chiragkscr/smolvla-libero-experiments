@@ -1,0 +1,4 @@
+cat > results/results.csv << 'EOF'
+date,run_id,model,suite,n_episodes,n_success,success_pct,ci95_low,ci95_high,notes
+2026-11-12,baseline_n20,HuggingFaceVLA/smolvla_libero,libero_spatial,20,14,70.0,48.1,85.5,pretrained; n_episodes=2 per task
+EOF
